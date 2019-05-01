@@ -21,14 +21,16 @@ fun main() {
 }
 
 
-open class Person(name: String = "John", age: Int=30, gender: String = "Female") {
-    val name: String = name
+open class Person(name: String = "John", var age: Int=30, gender: String = "Female") {
+    var name: String = name
         get() = "Name:$field"
     var gender: String? = null
 
     init {
         this.gender = gender
     }
+
+    fun incrementAge() = age++
 }
 
 data class Animal(val type: String, val weight: Int, val gender: String) {

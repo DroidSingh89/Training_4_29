@@ -19,16 +19,18 @@ fun main() {
 
 
 open class Person(name:String = "John", age:Int = 30, gender:String = "Female"){
-    val name: String = name
+    var name: String = name
     get() = "Name: $field"
 
-    val age: Int = age
+    var age: Int = age
     get() = field+2
 
     var gender: String = ""
     init {
         this.gender = gender
     }
+
+    fun incrementAge() = age++
 }
 
 data class Animal(val type:String, val weight:Int, val gender:String){
@@ -45,4 +47,9 @@ data class Animal(val type:String, val weight:Int, val gender:String){
 
 class AndroidDeveloper(val company: String, name:String): Person(name = name, gender = "Male"){
 
+}
+
+object Zoo{
+    val Cat = Animal("Cat", 8, "Female")
+    val Tiger = Animal("Cat", 800, "Female")
 }

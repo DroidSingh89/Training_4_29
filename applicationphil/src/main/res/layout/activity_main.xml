@@ -1,19 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <!--Linear Layout-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+                android:id="@+id/tvWorld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hello"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/world"/>
+    </LinearLayout>
+
+    <!--Relative Layout-->
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button
+                android:id="@+id/btnFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/first"/>
+
+        <Button
+                android:id="@+id/btnSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnFirst"
+                android:layout_toRightOf="@id/btnFirst"
+                android:text="@string/second"/>
+    </RelativeLayout>
+
+
+    <!--Frame Layout-->
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+</LinearLayout>

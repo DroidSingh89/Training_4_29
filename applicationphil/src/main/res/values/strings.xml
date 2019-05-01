@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">ApplicationPhil</string>
+<<<<<<< HEAD
+    <string name="hello">Hello</string>
+    <string name="world">World!</string>
+    <string name="first">First</string>
+    <string name="second">Second</string>
+=======
 
+>>>>>>> 71528e2ebcc848a292dfe570df70dd1085da54ca
 </resources>

@@ -2,19 +2,46 @@
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         tools:context=".ContainerActivity">
+=======
+        tools:context=".LayoutActivity">
+    <!--Person input layout-->
+    <EditText
+            android:hint="Name"
+            android:text="John Doe"
+            android:id="@+id/etPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+            android:hint="Age"
+            android:text="12"
+            android:id="@+id/etPersonAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <EditText
+            android:text="Male"
+            android:hint="Gender"
+            android:id="@+id/etPersonGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+>>>>>>> 7a96bf9563fe4a1116e37b5af2acb5871f811404
 
     <!--Linear layout-->
     <LinearLayout
             android:id="@+id/linearLayout"
             style="@style/MyTheme"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+        <Button
+                android:text="Start second activity"
+                android:onClick="startSecondActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
 
         <TextView
                 android:id="@+id/tvWorld"
@@ -26,6 +53,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/hello"/>
+
+        <EditText
+                android:text="Default Value"
+                android:id="@+id/etMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

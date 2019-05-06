@@ -2,15 +2,16 @@ package com.example.training_4_29
 
 import android.content.Intent
 import android.content.res.Configuration
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import com.example.training_4_29.KotlinReview.Animal
 import com.example.training_4_29.KotlinReview.Person
 
-class MainActivity : AppCompatActivity() {
+class LayoutActivity : BaseActivity() {
 
     lateinit var etMain: EditText
     var updatedString: String = ""
@@ -24,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("${MainActivity::javaClass.name}_TAG", "onCreate")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onCreate")
 
         val textView = findViewById<TextView>(R.id.tvWorld)
         textView.text = "Some other world"
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             etPersonAge.text.toString().toInt(),
             etPersonGender.text.toString())
 
-        val intent = Intent(applicationContext, SecondActivity::class.java)
+        val intent = Intent(applicationContext, IntentsActivity::class.java)
         intent.putExtra("someKey", "SomeValue")
         intent.putExtra("person", person)
         intent.putExtra("animal", Animal("cat", 12, "Female"))
@@ -76,37 +77,37 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onStart")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onResume")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onPause")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onStop")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onDestroy")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onDestroy")
     }
     override fun onRestart() {
         super.onRestart()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onRestart")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onRestart")
     }
 
 
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
-        Log.d("${MainActivity::javaClass.name}_TAG", "onSaveInstanceState")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onSaveInstanceState")
         outState?.putString("updatedString", updatedString)
 
     }
@@ -114,7 +115,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
-        Log.d("${MainActivity::javaClass.name}_TAG", "onRestoreInstanceState")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onRestoreInstanceState")
         updatedString = savedInstanceState?.getString("updatedString") ?: "Null"
     }
 
@@ -128,7 +129,25 @@ class MainActivity : AppCompatActivity() {
             else -> "Unknown Configuration"
         }
 
-        Log.d("${MainActivity::javaClass.name}_TAG", "onConfigurationChanged:$result")
+        Log.d("${LayoutActivity::javaClass.name}_TAG", "onConfigurationChanged:$result")
 
     }
+
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.overflow_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        return when (item.itemId) {
+            R.id.action_settings -> true
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 }

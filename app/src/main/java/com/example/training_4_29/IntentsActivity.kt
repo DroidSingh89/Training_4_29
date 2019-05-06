@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.example.training_4_29.KotlinReview.Animal
 import com.example.training_4_29.KotlinReview.Person
 
-class SecondActivity : AppCompatActivity() {
+class IntentsActivity : BaseActivity() {
 
     lateinit var etShareContent: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +22,8 @@ class SecondActivity : AppCompatActivity() {
 
         val person = intent.getSerializableExtra("person") as Person
         val animal = intent.getParcelableExtra("animal") as Animal
-        Log.d("${SecondActivity::class.java.simpleName}_TAG", person.toString())
-        Log.d("${SecondActivity::class.java.simpleName}_TAG", animal.toString())
+        Log.d("${IntentsActivity::class.java.simpleName}_TAG", person.toString())
+        Log.d("${IntentsActivity::class.java.simpleName}_TAG", animal.toString())
         Toast.makeText(applicationContext, valueFromIntent, Toast.LENGTH_SHORT).show()
 
     }

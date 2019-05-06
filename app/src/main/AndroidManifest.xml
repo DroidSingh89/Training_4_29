@@ -13,10 +13,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SecondActivity">
+
+
+        <activity android:name=".ContainerActivity">
+        </activity>
+        <activity android:name=".IntentsActivity">
         </activity>
         <activity
-                android:name=".MainActivity"
+                android:name=".LayoutActivity"
                 android:configChanges="screenSize|orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

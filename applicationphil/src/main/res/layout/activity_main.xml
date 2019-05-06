@@ -6,13 +6,41 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".LayoutActivity">
+
+    <!--Person Input Layout-->
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPersonName"
+            android:hint="Name"
+    />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPersonAge"
+            android:hint="Age"
+    />
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/etPersonGender"
+            android:hint="Gender"
+    />
 
     <!--Linear Layout-->
     <LinearLayout
-            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+        <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="startSecondActivity"
+                android:text="Start Second Activity"
+        />
 
         <TextView
                 android:id="@+id/tvWorld"
@@ -24,22 +52,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/world"/>
+
+        <EditText
+                android:id="@+id/etMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <!--Relative Layout-->
     <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
         <Button
-                android:id="@+id/btnFirst"
+                android:id="@+id/btnChangeText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/first"/>
 
         <Button
                 android:id="@+id/btnSecond"
+                android:onClick="onSecondClicked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/btnFirst"
-                android:layout_toRightOf="@id/btnFirst"
+                android:layout_below="@id/btnChangeText"
+                android:layout_toRightOf="@id/btnChangeText"
                 android:text="@string/second"/>
     </RelativeLayout>
 

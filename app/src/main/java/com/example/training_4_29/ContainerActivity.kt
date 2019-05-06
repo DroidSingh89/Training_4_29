@@ -9,12 +9,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 
-class MainActivity : AppCompatActivity() {
+class ContainerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Log.d("${MainActivity::javaClass.name}_TAG", "onCreate")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onCreate")
 
         val textView = findViewById<TextView>(R.id.tvWorld)
         textView.text = "Some other world"
@@ -38,30 +38,30 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onStart")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onResume")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onResume")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onPause")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onPause")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onStop")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onStop")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onDestroy")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onDestroy")
     }
     override fun onRestart() {
         super.onRestart()
-        Log.d("${MainActivity::javaClass.name}_TAG", "onRestart")
+        Log.d("${ContainerActivity::javaClass.name}_TAG", "onRestart")
     }
 }

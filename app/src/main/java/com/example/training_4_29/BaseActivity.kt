@@ -25,7 +25,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         super.setContentView(fullView)
         val toolbar = findViewById<View>(R.id.myToolbar) as Toolbar
         setSupportActionBar(toolbar)
-        title = "Activity Title"
+        title = "Android Training"
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close )

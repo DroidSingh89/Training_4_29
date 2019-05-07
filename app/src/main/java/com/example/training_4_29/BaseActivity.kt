@@ -17,21 +17,44 @@ import android.view.View
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
+    protected fun useToolbar():Boolean = true
 
     override fun setContentView(layoutResID: Int) {
+
+        setNavigationDrawer(layoutResID)
+
+    }
+
+    private fun setNavigationDrawer(layoutResID: Int) {
         val fullView = layoutInflater.inflate(R.layout.activity_base, null) as DrawerLayout
         val activityContainer = fullView.findViewById<View>(R.id.activity_content) as FrameLayout
         layoutInflater.inflate(layoutResID, activityContainer, true)
         super.setContentView(fullView)
-        val toolbar = findViewById<View>(R.id.myToolbar) as Toolbar
-        setSupportActionBar(toolbar)
-        title = "Android Training"
 
-        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close )
-        drawerLayout.addDrawerListener(toggle)
-        toggle.isDrawerIndicatorEnabled = true;
-        toggle.syncState()
+        val toolbar = findViewById<View>(R.id.myToolbar) as Toolbar
+        //setup toolbar
+        if (useToolbar()){
+            setSupportActionBar(toolbar)
+            title = "Training 4.29"
+//            setup for using the navigation toggle menu on toolbar
+            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+            val toggle = ActionBarDrawerToggle(
+                this,
+                drawerLayout,
+                toolbar,
+                R.string.navigation_drawer_open,
+                R.string.navigation_drawer_close
+            )
+            drawerLayout.addDrawerListener(toggle)
+            toggle.isDrawerIndicatorEnabled = true
+            toggle.syncState()
+        }
+
+
+
+//        setup listener for navigation view
+        val navigationView = findViewById<NavigationView>(R.id.navigationView)
+        navigationView.setNavigationItemSelectedListener(this)
     }
 
 

@@ -1,67 +1,28 @@
 package com.example.training_4_29
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
+import android.support.v7.widget.RecyclerView
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import com.example.training_4_29.adapter.PersonListAdapter
+import com.example.training_4_29.model.entities.personGenerator
 
-class ContainerActivity : AppCompatActivity() {
+
+class ContainerActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onCreate")
+        setContentView(R.layout.activity_container)
 
-        val textView = findViewById<TextView>(R.id.tvWorld)
-        textView.text = "Some other world"
 
-        val buttonchangeText = findViewById<Button>(R.id.btnChangeText)
-        setChangeTextListener(buttonchangeText, textView)
+        val lvSimple = findViewById<ListView>(R.id.lvSimple)
+        lvSimple.adapter = ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, listOf("one", "two", "three", "four"))
 
-        val newTextView = TextView(this).apply { text = "New TextView" }
-        val linearLayout = findViewById<LinearLayout>(R.id.linearLayout)
-        linearLayout.addView(newTextView)
-    }
+        val lvPerson = findViewById<ListView>(R.id.lvPerson)
+        lvPerson.adapter = PersonListAdapter(this, R.layout.list_item_person, personGenerator(10))
 
-    private fun setChangeTextListener(buttonchangeText: Button, textView: TextView) {
-        buttonchangeText.setOnClickListener { textView.text = "New World" }
-    }
-
-    fun onSecondClicked(view: View) {
-        Toast.makeText(this, "Something", Toast.LENGTH_SHORT).show()
+        val rvAnimal = findViewById<RecyclerView>(R.id.rvAnimal)
     }
 
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onStart")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onResume")
-    }
-
-    override fun onPause() {
-        super.onPause()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onPause")
-    }
-
-    override fun onStop() {
-        super.onStop()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onStop")
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onDestroy")
-    }
-    override fun onRestart() {
-        super.onRestart()
-        Log.d("${ContainerActivity::javaClass.name}_TAG", "onRestart")
-    }
 }

@@ -1,4 +1,4 @@
-package com.example.training_4_29.JavaReview;
+package com.example.training_4_29.javaReview;
 
 public class Training {
 

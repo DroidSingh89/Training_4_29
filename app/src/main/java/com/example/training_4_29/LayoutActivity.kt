@@ -8,8 +8,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
-import com.example.training_4_29.KotlinReview.Animal
-import com.example.training_4_29.KotlinReview.Person
+import com.example.training_4_29.kotlinReview.Animal
+import com.example.training_4_29.kotlinReview.Person
 
 class LayoutActivity : BaseActivity() {
 

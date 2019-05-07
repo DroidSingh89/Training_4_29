@@ -1,7 +1,6 @@
 package com.example.training_4_29.model.entities
 
-import com.example.training_4_29.KotlinReview.Person
-import java.util.*
+import com.example.training_4_29.kotlinReview.Person
 
 
 fun personGenerator(size: Int): List<Person> {

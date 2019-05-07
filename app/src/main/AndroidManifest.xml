@@ -11,13 +11,7 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-<<<<<<< HEAD
             android:theme="@style/AppTheme" tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ContainerActivity">
-=======
-            android:theme="@style/AppTheme"
-            tools:ignore="GoogleAppIndexingWarning">
-
 
         <activity android:name=".ContainerActivity">
         </activity>
@@ -26,7 +20,7 @@
         <activity
                 android:name=".LayoutActivity"
                 android:configChanges="screenSize|orientation|keyboardHidden">
->>>>>>> 7a96bf9563fe4a1116e37b5af2acb5871f811404
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -32,9 +32,6 @@ class AnimalListAdapter(val animalList: List<Animal>) : RecyclerView.Adapter<Ani
 
     }
 
-    override fun getItemViewType(position: Int): Int {
-        return super.getItemViewType(position)
-    }
 
     override fun getItemCount(): Int {
         return animalList.size

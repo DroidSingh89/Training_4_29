@@ -10,12 +10,12 @@ import android.widget.TextView
 import android.widget.VideoView
 import com.example.training_4_29.R
 import com.example.training_4_29.kotlinReview.Animal
+import com.example.training_4_29.utils.inflate
 
 class AnimalListAdapter(val animalList: List<Animal>) : RecyclerView.Adapter<AnimalListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recycler_item_animal, parent, false)
+        val view = parent.inflate(R.layout.recycler_item_animal)
 
         val viewHolder = ViewHolder(view)
 

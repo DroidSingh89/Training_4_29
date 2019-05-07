@@ -1,4 +1,4 @@
-package com.example.training_4_29
+package com.example.training_4_29.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.R
 import com.example.training_4_29.kotlinReview.Animal
 import com.example.training_4_29.kotlinReview.Person
 

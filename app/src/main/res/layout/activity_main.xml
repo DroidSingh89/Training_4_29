@@ -5,27 +5,10 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        tools:context=".ContainerActivity">
+        tools:context=".activity.ContainerActivity">
         tools:context=".LayoutActivity">
     <!--Person input layout-->
-    <EditText
-            android:hint="Name"
-            android:text="John Doe"
-            android:id="@+id/etPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:hint="Age"
-            android:text="12"
-            android:id="@+id/etPersonAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:text="Male"
-            android:hint="Gender"
-            android:id="@+id/etPersonGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <include layout="@layout/person_layout"/>
 
     <!--Linear layout-->
     <LinearLayout

@@ -1,10 +1,15 @@
-package com.example.training_4_29
+package com.example.training_4_29.activity
 
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.R
+import com.example.training_4_29.adapter.AnimalListAdapter
 import com.example.training_4_29.adapter.PersonListAdapter
+import com.example.training_4_29.model.entities.animalGenerator
 import com.example.training_4_29.model.entities.personGenerator
 
 
@@ -22,6 +27,8 @@ class ContainerActivity : BaseActivity() {
         lvPerson.adapter = PersonListAdapter(this, R.layout.list_item_person, personGenerator(10))
 
         val rvAnimal = findViewById<RecyclerView>(R.id.rvAnimal)
+        rvAnimal.layoutManager = LinearLayoutManager(this)
+        rvAnimal.adapter = AnimalListAdapter(animalGenerator(20))
     }
 
 

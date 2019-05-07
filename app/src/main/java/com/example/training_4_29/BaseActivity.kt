@@ -12,6 +12,8 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.example.training_4_29.activity.ContainerActivity
+import com.example.training_4_29.activity.StorageActivity
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -82,8 +84,8 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.container -> {
                 startActivity(Intent(applicationContext, ContainerActivity::class.java))
             }
-            R.id.layouts -> {
-
+            R.id.dataStorage -> {
+                startActivity(Intent(applicationContext, StorageActivity::class.java))
             }
 
         }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.StorageActivity">
+
+
+    <TextView android:text="Shared Preference"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+
+    <EditText
+            android:id="@+id/etSharedPref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btnSaveData"
+            android:text="Save data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btnGetData"
+            android:text="Get data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btnClearData"
+            android:text="Clear data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <TextView android:text="SQLite"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"/>
+
+
+    <!--person layout-->
+    <include layout="@layout/person_layout"/>
+
+
+</LinearLayout>

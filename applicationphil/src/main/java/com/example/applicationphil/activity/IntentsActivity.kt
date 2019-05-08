@@ -1,14 +1,15 @@
-package com.example.applicationphil
+package com.example.applicationphil.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.example.applicationphil.KotlinReview.Animal
-import com.example.applicationphil.KotlinReview.Person
+import com.example.applicationphil.BaseActivity
+import com.example.applicationphil.R
+import com.example.applicationphil.model.entities.Animal
+import com.example.applicationphil.model.entities.Person
 
 class IntentsActivity : BaseActivity() {
 

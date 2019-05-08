@@ -11,15 +11,19 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
+import com.example.applicationphil.activity.ContainerActivity
+import com.example.applicationphil.activity.IntentsActivity
+import com.example.applicationphil.activity.LayoutActivity
+import com.example.applicationphil.activity.StorageActivity
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     override fun setContentView(layoutResID: Int) {
         val fullView = layoutInflater.inflate(R.layout.activity_base, null) as DrawerLayout
-        val hostedActivityContainer = fullView.findViewById<FrameLayout>(R.id.hosted_activity)
+        val hostedActivityContainer = fullView.findViewById(R.id.hosted_activity) as FrameLayout
         layoutInflater.inflate(layoutResID, hostedActivityContainer, true)
-        super.setContentView(layoutResID)
+        super.setContentView(fullView)
         val toolbar = findViewById<View>(R.id.my_toolbar) as Toolbar
         setSupportActionBar(toolbar)
         title = "Dope Apps Inc"
@@ -29,16 +33,26 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         drawerLayout.addDrawerListener(toggle)
         toggle.isDrawerIndicatorEnabled = true;
         toggle.syncState()
+
+        val navigationView = findViewById<NavigationView>(R.id.navigationView)
+        navigationView.setNavigationItemSelectedListener { item: MenuItem -> this.onNavigationItemSelected(item) }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.container -> {
-                startActivity(Intent())
+                startActivity(Intent(applicationContext, ContainerActivity::class.java))
             }
             R.id.layouts -> {
-
+                startActivity(Intent(applicationContext, LayoutActivity::class.java))
             }
+            R.id.intents -> {
+                startActivity(Intent(applicationContext, IntentsActivity::class.java))
+            }
+            R.id.dataStorage -> {
+                startActivity(Intent(applicationContext, StorageActivity::class.java))
+            }
+            else -> { }
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)

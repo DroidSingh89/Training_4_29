@@ -1,4 +1,4 @@
-package com.example.applicationphil.JavaReview;
+package com.example.applicationphil.javaReview;
 
 public class Training {
 

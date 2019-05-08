@@ -1,5 +1,6 @@
 package com.example.applicationphil.model.entities
 
+import android.arch.persistence.room.Entity
 import android.os.Parcel
 import android.os.Parcelable
 import java.io.Serializable

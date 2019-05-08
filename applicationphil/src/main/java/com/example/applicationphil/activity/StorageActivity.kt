@@ -6,9 +6,9 @@ import android.os.Bundle
 import com.example.applicationphil.BaseActivity
 import com.example.applicationphil.R
 import com.example.applicationphil.adapter.PersonListAdapter
-import com.example.applicationphil.model.entities.Person
 import com.example.applicationphil.model.data.sqlite.PersonContract
 import com.example.applicationphil.model.data.sqlite.PersonDatabase
+import com.example.applicationphil.model.entities.Person
 import com.example.applicationphil.util.toast
 import kotlinx.android.synthetic.main.activity_storage.*
 import kotlinx.android.synthetic.main.person_input_layout.*

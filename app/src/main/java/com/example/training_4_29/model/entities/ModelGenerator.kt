@@ -1,10 +1,19 @@
 package com.example.training_4_29.model.entities
 
-import com.example.training_4_29.KotlinReview.Person
-import java.util.*
 
+fun personGenerator(size: Int): MutableList<Person> {
 
-fun personGenerator(size: Int): List<Person> {
+    return (1..size)
+        .map { Person(listOf("John", "Mark", "David", "Jake")[it % 4],
+        it,
+        mutableListOf("Male", "Female")[it % 2]) }.toMutableList()
+}
 
-    return (1..size).map { Person(listOf("John", "Mark", "David", "Jake")[it % 4], it, listOf("Male", "Female")[it % 2]) }
+fun animalGenerator(size: Int): MutableList<Animal> {
+
+    return (1..size)
+        .map { Animal(
+            mutableListOf("Cat", "Tiger", "Snake", "Elephant", "Giraffe", "Monkey")[it % 6],
+        it,
+        mutableListOf("Male", "Female")[it % 2]) }.toMutableList()
 }

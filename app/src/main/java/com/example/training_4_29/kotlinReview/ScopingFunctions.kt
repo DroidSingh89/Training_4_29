@@ -1,4 +1,6 @@
-package com.example.training_4_29.KotlinReview
+package com.example.training_4_29.kotlinReview
+
+import com.example.training_4_29.model.entities.Person
 
 
 //also: return object

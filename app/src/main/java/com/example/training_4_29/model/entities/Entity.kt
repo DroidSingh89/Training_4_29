@@ -1,29 +1,11 @@
-package com.example.training_4_29.KotlinReview
+package com.example.training_4_29.model.entities
 
+import android.arch.persistence.room.ColumnInfo
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
 import android.os.Parcel
 import android.os.Parcelable
 import java.io.Serializable
-
-
-fun main() {
-
-    val john = Person("John Doe", 10, "Male")
-    val mark = Person(age = 30, name = "Mark", gender = "Male")
-    val julia = Person("Julia", 14)
-
-    println(john.toString())
-    println(john.name)
-
-    val cat = Animal("Cat", 30, "Male")
-    println(cat.checkType())
-    println(cat.toString())
-    println(cat.safeType)
-
-    val phil = AndroidDeveloper("Mobile Apps", "Phil")
-    println("${phil.name}, Company:${phil.company}")
-
-}
-
 
 open class Person(name: String = "John", age: Int=30, gender: String = "Female"): Serializable {
     var age: Int = age
@@ -43,7 +25,17 @@ open class Person(name: String = "John", age: Int=30, gender: String = "Female")
 
 }
 
-data class Animal(val type: String, val weight: Int, val gender: String) : Parcelable{
+
+//use the class for room
+@Entity(tableName = "animal")
+data class Animal(@ColumnInfo(name = "type") var type: String = "Cat",
+                  @ColumnInfo(name = "weight")var weight: Int = 50,
+                  @ColumnInfo(name = "gender")var gender: String = "Female") : Parcelable {
+
+
+    @PrimaryKey(autoGenerate = true)
+    var id: Long = 0
+
 
     val safeType: String
         get() = "Type:$type"
@@ -81,5 +73,3 @@ data class Animal(val type: String, val weight: Int, val gender: String) : Parce
     }
 
 }
-
-class AndroidDeveloper(val company: String, name: String) : Person(name = name)

@@ -43,5 +43,35 @@
     <!--person layout-->
     <include layout="@layout/person_layout"/>
 
+    <Button
+            android:text="Save Person"
+            android:id="@+id/btnSavePerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:text="Get all person"
+            android:id="@+id/btnGetAllPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ListView
+            android:id="@+id/lvPersonList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <!--Room-->
+
+    <Button
+            android:id="@+id/btnSaveAnimal"
+            android:text="Save Animal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btnGetJungle"
+            android:text="Get Jungle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 </LinearLayout>

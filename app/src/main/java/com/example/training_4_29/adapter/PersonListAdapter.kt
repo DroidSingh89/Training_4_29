@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.training_4_29.R
-import com.example.training_4_29.kotlinReview.Person
+import com.example.training_4_29.model.entities.Person
 
-class PersonListAdapter(context: Context, val resource: Int, val personList: List<Person>): ArrayAdapter<Person>(context, resource, personList) {
+class PersonListAdapter(context: Context, val resource: Int, val personList: MutableList<Person>): ArrayAdapter<Person>(context, resource, personList) {
 
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -32,5 +32,10 @@ class PersonListAdapter(context: Context, val resource: Int, val personList: Lis
         return view
     }
 
+    fun updatePersonList(personList: List<Person>){
+        this.personList.clear()
+        this.personList.addAll(personList)
+        notifyDataSetChanged()
+    }
 
 }

@@ -3,13 +3,11 @@ package com.example.training_4_29.adapter
 import android.content.ContentValues.TAG
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.VideoView
 import com.example.training_4_29.R
-import com.example.training_4_29.kotlinReview.Animal
+import com.example.training_4_29.model.entities.Animal
 import com.example.training_4_29.utils.inflate
 
 class AnimalListAdapter(val animalList: List<Animal>) : RecyclerView.Adapter<AnimalListAdapter.ViewHolder>() {

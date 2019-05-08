@@ -8,8 +8,8 @@ import android.widget.EditText
 import android.widget.Toast
 import com.example.training_4_29.BaseActivity
 import com.example.training_4_29.R
-import com.example.training_4_29.kotlinReview.Animal
-import com.example.training_4_29.kotlinReview.Person
+import com.example.training_4_29.model.entities.Animal
+import com.example.training_4_29.model.entities.Person
 
 class IntentsActivity : BaseActivity() {
 

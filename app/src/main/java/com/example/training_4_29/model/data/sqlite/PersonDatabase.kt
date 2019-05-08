@@ -1,10 +1,10 @@
-package com.example.training_4_29.model.data
+package com.example.training_4_29.model.data.sqlite
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.training_4_29.kotlinReview.Person
+import com.example.training_4_29.model.entities.Person
 
 class PersonDatabase(context: Context, name: String, version: Int) :
     SQLiteOpenHelper(context, name, null, version) {
@@ -18,7 +18,7 @@ class PersonDatabase(context: Context, name: String, version: Int) :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    fun savePerson(person: Person) {
+    fun savePerson(person: Person) : Long{
 
         val contentValue = ContentValues()
 
@@ -26,9 +26,10 @@ class PersonDatabase(context: Context, name: String, version: Int) :
         contentValue.put(PersonContract.FeedEntry.COLUMN_AGE, person.age)
         contentValue.put(PersonContract.FeedEntry.COLUMN_GENDER, person.gender)
 
-        writableDatabase.insert(PersonContract.FeedEntry.TABLE_NAME, null, contentValue)
+        val rowID = writableDatabase.insert(PersonContract.FeedEntry.TABLE_NAME, null, contentValue)
         writableDatabase.close()
 
+        return rowID
     }
 
     fun getAllPerson(): List<Person> {

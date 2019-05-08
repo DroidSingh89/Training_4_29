@@ -1,4 +1,6 @@
-package com.example.applicationphil.KotlinReview
+package com.example.applicationphil.kotlinReview
+
+import com.example.applicationphil.model.entities.Person
 
 //also: returns object
 //let : returns lambda

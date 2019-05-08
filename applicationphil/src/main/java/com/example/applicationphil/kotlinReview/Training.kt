@@ -1,4 +1,4 @@
-package com.example.applicationphil.KotlinReview
+package com.example.applicationphil.kotlinReview
 
 fun main() {
 

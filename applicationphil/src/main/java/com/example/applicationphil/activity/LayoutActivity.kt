@@ -1,14 +1,15 @@
-package com.example.applicationphil
+package com.example.applicationphil.activity
 
 import android.content.Intent
 import android.content.res.Configuration
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.*
-import com.example.applicationphil.KotlinReview.Animal
-import com.example.applicationphil.KotlinReview.Person
+import com.example.applicationphil.BaseActivity
+import com.example.applicationphil.R
+import com.example.applicationphil.model.entities.Animal
+import com.example.applicationphil.model.entities.Person
 
 class LayoutActivity : BaseActivity() {
     lateinit var etMain: EditText
@@ -44,7 +45,8 @@ class LayoutActivity : BaseActivity() {
         val person = Person(
             etPersonName.text.toString(),
             etPersonAge.text.toString().toInt(),
-            etPersonGender.text.toString())
+            etPersonGender.text.toString()
+        )
 
         val intent = Intent(applicationContext, IntentsActivity::class.java)
         intent.putExtra("someKey", "someValue")

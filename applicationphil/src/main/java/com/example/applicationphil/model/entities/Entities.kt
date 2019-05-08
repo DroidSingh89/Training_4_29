@@ -1,10 +1,12 @@
-package com.example.applicationphil.KotlinReview
+package com.example.applicationphil.model.entities
 
+import android.arch.persistence.room.Entity
 import android.os.Parcel
 import android.os.Parcelable
 import java.io.Serializable
 
 
+/*
 fun main() {
 
     val john = Person("John Doe", 30, "Male")
@@ -20,6 +22,7 @@ fun main() {
     val phil = AndroidDeveloper("Mobile Apps", "Phil Bascom")
     println("Name: ${phil.name}, Company: ${phil.company}")
 }
+*/
 
 
 open class Person(name:String = "John", age:Int = 30, gender:String = "Female"): Serializable{
@@ -38,10 +41,10 @@ open class Person(name:String = "John", age:Int = 30, gender:String = "Female"):
     override fun toString(): String {
         return "Person(name='$name', age=$age, gender='$gender')"
     }
-
-
 }
 
+//Use for Room
+@Entity
 data class Animal(val type:String, val weight:Int, val gender:String): Parcelable{
 
     val safeType:String

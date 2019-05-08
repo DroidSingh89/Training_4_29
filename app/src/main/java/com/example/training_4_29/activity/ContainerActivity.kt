@@ -24,7 +24,7 @@ class ContainerActivity : BaseActivity() {
         lvSimple.adapter = ArrayAdapter(applicationContext, android.R.layout.simple_list_item_1, listOf("one", "two", "three", "four"))
 
         val lvPerson = findViewById<ListView>(R.id.lvPerson)
-        lvPerson.adapter = PersonListAdapter(this, R.layout.list_item_person, clear
+        lvPerson.adapter = PersonListAdapter(this, R.layout.list_item_person,
                 personGenerator(10))
 
         val rvAnimal = findViewById<RecyclerView>(R.id.rvAnimal)

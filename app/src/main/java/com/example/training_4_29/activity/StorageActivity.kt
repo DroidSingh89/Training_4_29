@@ -74,7 +74,6 @@ class StorageActivity : BaseActivity(), View.OnClickListener {
         btnGetAllPerson.setOnClickListener {
 
             adapter.updatePersonList(personDatabase.getAllPerson())
-
         }
 
 
@@ -82,15 +81,19 @@ class StorageActivity : BaseActivity(), View.OnClickListener {
         btnSaveAnimal.setOnClickListener(this)
         btnGetJungle.setOnClickListener(this)
 
-
     }
+
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+    }
+
 
     override fun onClick(view: View?) {
 
         when (view?.id) {
             R.id.btnSaveAnimal -> animalRepository.saveAnimal(Animal())
             R.id.btnGetJungle -> animalRepository.getJungle { list -> runOnUiThread { printList(list) } }
-
         }
     }
 

@@ -23,13 +23,15 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
         val fullView = layoutInflater.inflate(R.layout.activity_base, null) as DrawerLayout
         val hostedActivityContainer = fullView.findViewById(R.id.hosted_activity) as FrameLayout
         layoutInflater.inflate(layoutResID, hostedActivityContainer, true)
+        val activityContainer = fullView.findViewById<FrameLayout>(R.id.hosted_activity)
+        layoutInflater.inflate(layoutResID, activityContainer, true)
         super.setContentView(fullView)
         val toolbar = findViewById<View>(R.id.my_toolbar) as Toolbar
         setSupportActionBar(toolbar)
-        title = "Dope Apps Inc"
+        title = "Activity Title"
 
         val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
-        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close )
         drawerLayout.addDrawerListener(toggle)
         toggle.isDrawerIndicatorEnabled = true;
         toggle.syncState()

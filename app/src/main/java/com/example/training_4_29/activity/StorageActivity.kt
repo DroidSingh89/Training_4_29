@@ -56,6 +56,7 @@ class StorageActivity : BaseActivity(), View.OnClickListener {
 
         val adapter = PersonListAdapter(applicationContext, R.layout.list_item_person, mutableListOf())
         lvPersonList.adapter = adapter
+        lvPersonList.setOnItemClickListener { parent, view, position, id -> toast(position.toString()) }
 
         btnSavePerson.setOnClickListener {
             val rowId = personDatabase.savePerson(

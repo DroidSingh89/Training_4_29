@@ -27,7 +27,7 @@ class LayoutActivity : BaseActivity() {
     //testing change
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_layout)
         Log.d("${LayoutActivity::javaClass.name}_TAG", "onCreate")
 
         val textView = findViewById<TextView>(R.id.tvWorld)
@@ -78,6 +78,7 @@ class LayoutActivity : BaseActivity() {
     }
 
 
+    //lifecycle methods
     override fun onStart() {
         super.onStart()
         Log.d("${LayoutActivity::javaClass.name}_TAG", "onStart")

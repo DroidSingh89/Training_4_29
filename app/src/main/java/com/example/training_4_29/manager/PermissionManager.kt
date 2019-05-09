@@ -10,7 +10,7 @@ object PermissionManager {
 
     const val MY_PERMISSIONS_REQUEST_READ_CONTACTS = 10
 
-    fun checkContactPermission(thisActivity: Activity){
+    fun checkContactPermission(thisActivity: Activity, callback: (Boolean) -> Unit){
 
         // Here, thisActivity is the current activity
         if (ContextCompat.checkSelfPermission(thisActivity,
@@ -36,13 +36,14 @@ object PermissionManager {
             }
         } else {
             // Permission has already been granted
+            callback.invoke(true)
         }
 
     }
 
     fun onPermissionResult(requestCode: Int,
                            permissions: Array<out String>,
-                           grantResults: IntArray){
+                           grantResults: IntArray, callback: (Boolean) -> Unit){
 
         when (requestCode) {
             MY_PERMISSIONS_REQUEST_READ_CONTACTS -> {
@@ -50,9 +51,11 @@ object PermissionManager {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     // permission was granted, yay! Do the
                     // contacts-related task you need to do.
+                    callback.invoke(true)
                 } else {
                     // permission denied, boo! Disable the
                     // functionality that depends on this permission.
+                    callback.invoke(false)
                 }
                 return
             }

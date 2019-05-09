@@ -3,17 +3,19 @@ package com.example.training_4_29
 import android.content.Intent
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
-import android.support.v7.app.AppCompatActivity
-import android.widget.FrameLayout
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.FrameLayout
 import com.example.training_4_29.activity.ContainerActivity
+import com.example.training_4_29.activity.ProviderActivity
 import com.example.training_4_29.activity.StorageActivity
+import com.example.training_4_29.activity.ThreadingActivity
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -87,11 +89,19 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.dataStorage -> {
                 startActivity(Intent(applicationContext, StorageActivity::class.java))
             }
+            R.id.provider-> {
+                startActivity(Intent(applicationContext, ProviderActivity::class.java))
+            }
+
+            R.id.threading-> {
+                startActivity(Intent(applicationContext, ThreadingActivity::class.java))
+            }
 
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
 
 }

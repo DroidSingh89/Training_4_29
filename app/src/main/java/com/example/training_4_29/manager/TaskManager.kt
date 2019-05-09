@@ -4,13 +4,15 @@ import android.util.Log
 
 object TaskManager {
 
-    fun startTask(any: Any, sequence: Int) {
+    fun startTask(className: String, sequence: Int, callback: (Int)-> Unit) {
         (1..sequence).forEach {
             Thread.sleep(500)
             Log.d(
-                "ThreadingActivity", "$any task $it running " +
-                        "on ${Thread.currentThread().name}"
+                TaskManager::class.java.simpleName,
+                "$className task $it running on ${Thread.currentThread().name}"
             )
+            callback.invoke(it)
+
         }
     }
 }

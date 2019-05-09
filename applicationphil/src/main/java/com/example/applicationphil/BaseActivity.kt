@@ -11,10 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
-import com.example.applicationphil.activity.ContainerActivity
-import com.example.applicationphil.activity.IntentsActivity
-import com.example.applicationphil.activity.LayoutActivity
-import com.example.applicationphil.activity.StorageActivity
+import com.example.applicationphil.activity.*
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -53,6 +50,12 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
             R.id.dataStorage -> {
                 startActivity(Intent(applicationContext, StorageActivity::class.java))
+            }
+            R.id.contentProviders -> {
+                startActivity(Intent(applicationContext, ProviderActivity::class.java))
+            }
+            R.id.threading -> {
+                startActivity(Intent(applicationContext, ThreadingActivity::class.java))
             }
             else -> { }
         }

@@ -73,3 +73,6 @@ data class Animal(@ColumnInfo(name = "type") var type: String = "Cat",
     }
 
 }
+
+
+data class Contact(val name: String, val numbers: List<String>)

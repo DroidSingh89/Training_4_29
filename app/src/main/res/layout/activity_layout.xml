@@ -5,8 +5,8 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-<<<<<<< HEAD
-        tools:context=".ContainerActivity">
+        tools:context=".activity.LayoutActivity">
+
     <!--Person input layout-->
     <EditText
             android:hint="Name"
@@ -27,14 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 <!--Linear layout-->
-=======
-        tools:context=".activity.ContainerActivity">
-        tools:context=".LayoutActivity">
-    <!--Person input layout-->
-    <include layout="@layout/person_layout"/>
+
 
     <!--Linear layout-->
->>>>>>> 87ac19846f2eaae93b9103ec04dbfa64c26706cb
     <LinearLayout
             android:id="@+id/linearLayout"
             style="@style/MyTheme"

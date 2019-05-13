@@ -91,3 +91,5 @@ object Zoo{
     val Cat = Animal("Cat", 8, "Female")
     val Tiger = Animal("Cat", 800, "Female")
 }
+
+data class Contact(val name: String, val numbers: List<String>)

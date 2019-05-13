@@ -6,28 +6,8 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         tools:context=".activity.LayoutActivity">
-
     <!--Person input layout-->
-    <EditText
-            android:hint="Name"
-            android:text="John Doe"
-            android:id="@+id/etPersonName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:hint="Age"
-            android:text="12"
-            android:id="@+id/etPersonAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    <EditText
-            android:text="Male"
-            android:hint="Gender"
-            android:id="@+id/etPersonGender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-<!--Linear layout-->
-
+    <include layout="@layout/person_layout"/>
 
     <!--Linear layout-->
     <LinearLayout

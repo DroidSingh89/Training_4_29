@@ -19,4 +19,12 @@
             android:id="@+id/dataStorage"
             android:title="Data Storage"/>
 
+    <item
+            android:id="@+id/contentProviders"
+            android:title="Content Providers"/>
+
+    <item
+            android:id="@+id/threading"
+            android:title="Threading"/>
+
 </menu>

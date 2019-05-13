@@ -24,4 +24,12 @@
             android:id="@+id/threading"
             android:title="Threading"/>
 
+    <item
+            android:id="@+id/receiver"
+            android:title="Receiver"/>
+
+    <item
+            android:id="@+id/service"
+            android:title="Service"/>
+
 </menu>

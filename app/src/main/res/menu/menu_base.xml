@@ -32,4 +32,8 @@
             android:id="@+id/service"
             android:title="Service"/>
 
+    <item
+            android:id="@+id/network"
+            android:title="Network"/>
+
 </menu>

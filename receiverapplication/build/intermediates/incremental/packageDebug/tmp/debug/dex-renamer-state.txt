@@ -1,4 +1,0 @@
-#Mon May 13 11:49:19 EDT 2019
-base.0=/Users/mac/AndroidStudioProjects/Training_4_29/receiverapplication/build/intermediates/dex/debug/mergeDexDebug/out
-path.0=classes.dex
-renamed.0=classes.dex

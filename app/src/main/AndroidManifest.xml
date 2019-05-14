@@ -14,6 +14,24 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.NetworkActivity">
+        </activity>
+
+        <service
+                android:name=".service.MyJobService"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <service
+                android:name=".service.MyBoundService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+        <service
+                android:name=".service.MyIntentService"
+                android:exported="false">
+        </service>
         <service
                 android:name=".service.MyNormalService"
                 android:enabled="true"

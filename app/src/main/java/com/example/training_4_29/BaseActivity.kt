@@ -12,10 +12,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
-import com.example.training_4_29.activity.ContainerActivity
-import com.example.training_4_29.activity.ProviderActivity
-import com.example.training_4_29.activity.StorageActivity
-import com.example.training_4_29.activity.ThreadingActivity
+import com.example.training_4_29.activity.*
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -96,6 +93,13 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.threading-> {
                 startActivity(Intent(applicationContext, ThreadingActivity::class.java))
             }
+            R.id.receiver-> {
+                startActivity(Intent(applicationContext, ReceiverActivity::class.java))
+            }
+            R.id.service-> {
+                startActivity(Intent(applicationContext, ServiceActivity::class.java))
+            }
+
 
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

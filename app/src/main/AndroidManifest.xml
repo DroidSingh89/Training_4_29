@@ -14,6 +14,45 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.NetworkActivity">
+        </activity>
+
+        <service
+                android:name=".service.MyJobService"
+                android:enabled="true"
+                android:exported="true"
+                android:permission="android.permission.BIND_JOB_SERVICE">
+        </service>
+        <service
+                android:name=".service.MyBoundService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+        <service
+                android:name=".service.MyIntentService"
+                android:exported="false">
+        </service>
+        <service
+                android:name=".service.MyNormalService"
+                android:enabled="true"
+                android:exported="true">
+        </service>
+
+        <activity android:name=".activity.ServiceActivity">
+        </activity>
+
+        <receiver
+                android:name=".receiver.MyStaticReceiver"
+                android:enabled="true"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE">
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.ReceiverActivity">
+        </activity>
         <activity android:name=".activity.ThreadingActivity">
         </activity>
         <activity android:name=".activity.ProviderActivity">

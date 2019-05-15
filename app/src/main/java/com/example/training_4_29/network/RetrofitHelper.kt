@@ -12,15 +12,15 @@ import retrofit2.http.Query
 
 class RetrofitHelper {
 
-    val baseUrl = "https://randomuser.me/"
-    fun createClient(): Retrofit {
+    private val baseUrl = "https://randomuser.me/"
+    private fun createClient(): Retrofit {
         return Retrofit.Builder()
             .baseUrl(baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 
-    fun createService(): RetrofitService{
+    private fun createService(): RetrofitService{
         return createClient().create(RetrofitService::class.java)
     }
 

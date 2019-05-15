@@ -28,4 +28,14 @@
             android:id="@+id/btnRetrofitAsync"
             android:text="Retrofit Async"
             android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <Button
+            android:text="Start Listening to observable"
+            android:id="@+id/btnStartListening"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <Button
+            android:text="StopListening to observable"
+            android:id="@+id/btnStopListening"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
 </LinearLayout>

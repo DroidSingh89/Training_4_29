@@ -2,7 +2,7 @@ package com.example.training_4_29.network
 
 import android.util.Log
 import com.example.training_4_29.model.entities.RandomUser.RandomUserResponse
-import com.google.gson.Gson
+import com.example.training_4_29.utils.Parser
 import okhttp3.*
 import okhttp3.logging.HttpLoggingInterceptor
 import java.io.IOException
@@ -38,8 +38,9 @@ class OkHttpHelper {
             }
 
             override fun onResponse(call: Call, response: Response) {
-                val response  = response.body()?.string()
-                val randomUserResponse = Gson().fromJson(response, RandomUserResponse::class.java)
+                val responseString = response.body()?.string()
+                val randomUserResponse = Parser.gsonParser(responseString)
+                Parser.nativeParser(responseString)
                 callback.invoke(randomUserResponse)
             }
 

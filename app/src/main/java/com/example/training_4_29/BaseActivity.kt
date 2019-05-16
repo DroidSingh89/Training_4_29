@@ -107,6 +107,9 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.fragment-> {
                 startActivity(Intent(applicationContext, FragmentActivity::class.java))
             }
+            R.id.firebase-> {
+                startActivity(Intent(applicationContext, FirebaseActivity::class.java))
+            }
 
 
         }

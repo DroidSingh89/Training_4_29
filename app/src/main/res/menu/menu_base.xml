@@ -40,4 +40,8 @@
             android:id="@+id/fragment"
             android:title="Fragment"/>
 
+    <item
+            android:id="@+id/firebase"
+            android:title="Firebase"/>
+
 </menu>

@@ -1,14 +1,13 @@
 package com.example.training_4_29.fragment
 
 import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
 import com.example.training_4_29.R
+import kotlinx.android.synthetic.main.fragment_dynamic.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,9 +45,14 @@ class DynamicFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_dynamic, container, false)
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    fun onButtonPressed(uri: Uri) {
-        listener?.onFragmentInteraction(uri)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        btnDynamicFrag.setOnClickListener { onButtonPressed(etDynamicFrag.text.toString()) }
+
+    }
+
+    fun onButtonPressed(string: String) {
+        listener?.onFragmentInteraction(string)
     }
 
     override fun onAttach(context: Context) {
@@ -77,8 +81,7 @@ class DynamicFragment : Fragment() {
      * for more information.
      */
     interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        fun onFragmentInteraction(uri: Uri)
+        fun onFragmentInteraction(string: String)
     }
 
     companion object {

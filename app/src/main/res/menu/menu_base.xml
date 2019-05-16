@@ -36,4 +36,8 @@
             android:id="@+id/network"
             android:title="Network"/>
 
+    <item
+            android:id="@+id/fragment"
+            android:title="Fragment"/>
+
 </menu>

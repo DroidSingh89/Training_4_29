@@ -104,6 +104,10 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivity(Intent(applicationContext, NetworkActivity::class.java))
             }
 
+            R.id.fragment-> {
+                startActivity(Intent(applicationContext, FragmentActivity::class.java))
+            }
+
 
         }
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)

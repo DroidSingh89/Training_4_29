@@ -1,4 +1,4 @@
-package com.example.training_4_29.activity
+package com.example.training_4_29.ui.activity
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -12,6 +12,7 @@ import com.example.training_4_29.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.model.entities.Animal
 import com.example.training_4_29.model.entities.Person
+import com.example.training_4_29.utils.toast
 
 
 class LayoutActivity : BaseActivity() {
@@ -81,6 +82,10 @@ class LayoutActivity : BaseActivity() {
     //lifecycle methods
     override fun onStart() {
         super.onStart()
+
+        if(intent.getStringExtra("articleid")!= null){
+            toast("ArticleId: ${intent.getStringExtra("articleid")}")
+        }
         Log.d("${LayoutActivity::javaClass.name}_TAG", "onStart")
     }
 
@@ -153,5 +158,8 @@ class LayoutActivity : BaseActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+
+
 
 }

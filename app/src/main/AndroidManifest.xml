@@ -16,12 +16,18 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.FirebaseActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.firebase.FirebaseActivity">
         </activity>
-        <activity android:name=".activity.FragmentActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.FragmentActivity">
         </activity>
-        <activity android:name=".activity.NetworkActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.NetworkActivity">
         </activity>
+
+        <service android:name=".service.FirebaseService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
 
         <service
                 android:name=".service.MyJobService"
@@ -44,7 +50,7 @@
                 android:exported="true">
         </service>
 
-        <activity android:name=".activity.ServiceActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.ServiceActivity">
         </activity>
 
         <receiver
@@ -57,20 +63,20 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.ReceiverActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.ReceiverActivity">
         </activity>
-        <activity android:name=".activity.ThreadingActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.ThreadingActivity">
         </activity>
-        <activity android:name=".activity.ProviderActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.ProviderActivity">
         </activity>
-        <activity android:name=".activity.StorageActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.StorageActivity">
         </activity>
-        <activity android:name=".activity.ContainerActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.ContainerActivity">
         </activity>
-        <activity android:name=".activity.IntentsActivity">
+        <activity android:name="com.example.training_4_29.ui.activity.IntentsActivity">
         </activity>
         <activity
-                android:name=".activity.LayoutActivity"
+                android:name="com.example.training_4_29.ui.activity.LayoutActivity"
                 android:configChanges="screenSize|orientation|keyboardHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

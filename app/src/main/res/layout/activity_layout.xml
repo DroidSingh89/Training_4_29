@@ -5,7 +5,7 @@
         android:orientation="vertical"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
-        tools:context=".activity.LayoutActivity">
+        tools:context=".ui.activity.LayoutActivity">
     <!--Person input layout-->
     <include layout="@layout/person_layout"/>
 

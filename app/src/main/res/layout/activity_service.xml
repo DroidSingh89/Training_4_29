@@ -6,7 +6,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.ServiceActivity">
+        tools:context=".ui.activity.ServiceActivity">
 
     <Button
             android:id="@+id/btnStartNormal"

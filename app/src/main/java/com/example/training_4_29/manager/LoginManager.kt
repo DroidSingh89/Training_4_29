@@ -2,7 +2,8 @@ package com.example.training_4_29.manager
 
 import android.annotation.SuppressLint
 import android.content.Context
-import com.example.training_4_29.utils.toast
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 
 @SuppressLint("StaticFieldLeak")
@@ -12,26 +13,30 @@ object LoginManager {
 
     fun checkSession(): Boolean = auth.currentUser != null
 
-    fun createUser(email: String, password: String) {
+    fun createUser(email: String, password: String, callback: (Boolean) -> Unit) {
 
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
-                if (task.isSuccessful) context.toast("user created")
-                else context.toast("user not created because ${task.exception}")
+                taskResults(task, callback)
             }
     }
 
-    fun signIn(email: String, password: String) {
+    fun signIn(email: String, password: String, callback: (Boolean) -> Unit) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
-                if (task.isSuccessful) context.toast("signed in")
-                else context.toast("invalid credentials")
+                taskResults(task, callback)
             }
 
     }
 
-    fun signOut() {
+    fun signOut(callback: (Boolean) -> Unit) {
         auth.signOut()
-        context.toast("signed out")
+        callback.invoke(true)
+        //context.toast("signed out")
+    }
+
+    var taskResults: (Task<AuthResult>, (Boolean) -> Unit) -> Unit = { task, callback ->
+        if (task.isSuccessful) callback.invoke(true)
+        else callback.invoke(false)
     }
 }

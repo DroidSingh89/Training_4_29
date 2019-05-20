@@ -17,4 +17,7 @@ object NetworkManager{
             else -> print("Invalid network provider")
         }
     }
+
+
+
 }

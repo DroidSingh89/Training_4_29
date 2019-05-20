@@ -1,4 +1,4 @@
-package com.example.training_4_29.fragment
+package com.example.training_4_29.ui.fragment
 
 import android.content.Context
 import android.os.Bundle

@@ -1,12 +1,12 @@
-package com.example.training_4_29.activity
+package com.example.training_4_29.ui.activity
 
 import android.os.Bundle
 import android.util.Log
 import com.example.training_4_29.BaseActivity
 import com.example.training_4_29.R
-import com.example.training_4_29.fragment.DynamicFragment
-import com.example.training_4_29.fragment.HeadlessFragment
-import com.example.training_4_29.fragment.StaticFragment
+import com.example.training_4_29.ui.fragment.DynamicFragment
+import com.example.training_4_29.ui.fragment.HeadlessFragment
+import com.example.training_4_29.ui.fragment.StaticFragment
 import com.example.training_4_29.utils.toast
 import kotlinx.android.synthetic.main.activity_fragment.*
 

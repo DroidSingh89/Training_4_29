@@ -1,4 +1,4 @@
-package com.example.training_4_29.activity
+package com.example.training_4_29.ui.activity
 
 import android.app.job.JobInfo
 import android.app.job.JobScheduler

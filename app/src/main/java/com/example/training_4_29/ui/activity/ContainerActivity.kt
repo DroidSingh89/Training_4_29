@@ -1,4 +1,4 @@
-package com.example.training_4_29.activity
+package com.example.training_4_29.ui.activity
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager

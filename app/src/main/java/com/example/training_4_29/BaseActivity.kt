@@ -12,7 +12,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
-import com.example.training_4_29.activity.*
+import com.example.training_4_29.ui.activity.*
+import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

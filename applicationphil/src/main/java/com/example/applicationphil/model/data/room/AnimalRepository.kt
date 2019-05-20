@@ -1,6 +1,6 @@
 package com.example.applicationphil.model.data.room
 
-import android.arch.persistence.room.Room
+import androidx.room.Room
 import android.content.ContentValues.TAG
 import android.content.Context
 import android.util.Log

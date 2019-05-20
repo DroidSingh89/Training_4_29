@@ -1,19 +1,18 @@
 package com.example.training_4_29
 
 import android.content.Intent
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.FrameLayout
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
 import com.example.training_4_29.ui.activity.*
 import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
+import com.google.android.material.navigation.NavigationView
 
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -28,7 +27,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
     }
 
     private fun setNavigationDrawer(layoutResID: Int) {
-        val fullView = layoutInflater.inflate(R.layout.activity_base, null) as DrawerLayout
+        val fullView = layoutInflater.inflate(R.layout.activity_base, null) as androidx.drawerlayout.widget.DrawerLayout
         val activityContainer = fullView.findViewById<View>(R.id.activity_content) as FrameLayout
         layoutInflater.inflate(layoutResID, activityContainer, true)
         super.setContentView(fullView)
@@ -39,7 +38,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             setSupportActionBar(toolbar)
             title = "Training 4.29"
 //            setup for using the navigation toggle menu on toolbar
-            val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+            val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
             val toggle = ActionBarDrawerToggle(
                 this,
                 drawerLayout,
@@ -114,7 +113,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
 
         }
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }

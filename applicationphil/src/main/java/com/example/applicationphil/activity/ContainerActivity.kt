@@ -1,8 +1,8 @@
 package com.example.applicationphil.activity
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import com.example.applicationphil.BaseActivity
@@ -20,7 +20,7 @@ class ContainerActivity : BaseActivity() {
 
         val lvSimple = findViewById<ListView>(R.id.lvSimple) as ListView
         val lvPerson = findViewById<ListView>(R.id.lvPerson) as ListView
-        val rvAnimal = findViewById<RecyclerView>(R.id.rvAnimal)
+        val rvAnimal = findViewById<androidx.recyclerview.widget.RecyclerView>(R.id.rvAnimal)
 
         lvSimple.adapter = ArrayAdapter(
             applicationContext,
@@ -33,7 +33,7 @@ class ContainerActivity : BaseActivity() {
             personGenerator(12)
         )
 
-        rvAnimal.layoutManager = LinearLayoutManager(this)
+        rvAnimal.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
         rvAnimal.adapter = AnimalListAdapter(animalGenerator(20))
     }
 }

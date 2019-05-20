@@ -2,8 +2,8 @@ package com.example.training_4_29.utils
 
 import android.content.Context
 import android.content.Intent
-import android.support.annotation.LayoutRes
-import android.support.v7.app.AppCompatActivity
+import androidx.annotation.LayoutRes
+import androidx.appcompat.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

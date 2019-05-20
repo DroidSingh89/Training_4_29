@@ -1,7 +1,7 @@
 package com.example.applicationphil.adapter
 
 import android.content.ContentValues.TAG
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +10,7 @@ import android.widget.TextView
 import com.example.applicationphil.R
 import com.example.applicationphil.model.entities.Animal
 
-class AnimalListAdapter(val animalList: List<Animal>): RecyclerView.Adapter<AnimalListAdapter.ViewHolder>() {
+class AnimalListAdapter(val animalList: List<Animal>): androidx.recyclerview.widget.RecyclerView.Adapter<AnimalListAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.recycler_item_animal, parent, false)
 
@@ -32,7 +32,7 @@ class AnimalListAdapter(val animalList: List<Animal>): RecyclerView.Adapter<Anim
         viewHolder.tvAnimalGender.text = animal.gender
     }
 
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View): androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         val tvAnimalType = itemView.findViewById<TextView>(R.id.tvAnimalType)
         val tvAnimalWeight = itemView.findViewById<TextView>(R.id.tvAnimalWeight)

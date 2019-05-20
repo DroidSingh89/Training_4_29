@@ -44,4 +44,8 @@
             android:id="@+id/firebase"
             android:title="Firebase"/>
 
+    <item
+            android:id="@+id/github"
+            android:title="Github"/>
+
 </menu>

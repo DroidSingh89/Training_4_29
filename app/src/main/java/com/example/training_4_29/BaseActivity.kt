@@ -12,6 +12,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import com.example.training_4_29.ui.activity.*
 import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
+import com.example.training_4_29.ui.activity.github.GithubActivity
 import com.google.android.material.navigation.NavigationView
 
 
@@ -111,6 +112,9 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivity(Intent(applicationContext, FirebaseActivity::class.java))
             }
 
+            R.id.github-> {
+                startActivity(Intent(applicationContext, GithubActivity::class.java))
+            }
 
         }
         val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)

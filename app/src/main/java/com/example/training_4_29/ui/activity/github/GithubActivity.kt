@@ -13,13 +13,13 @@ import kotlinx.android.synthetic.main.activity_github.*
 
 class GithubActivity : BaseActivity() {
 
-    lateinit var githubViewModel: GithubViewModel
+    val githubViewModel: GithubViewModel by lazy { ViewModelProviders.of(this).get(GithubViewModel::class.java) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_github)
 
-        val githubBinding: ActivityGithubBinding = DataBindingUtil.setContentView(this, R.layout.activity_github)
-        githubViewModel = ViewModelProviders.of(this).get(GithubViewModel::class.java)
+        val githubBinding: ActivityGithubBinding = DataBindingUtil.setContentView(this,  R.layout.activity_github)
 
         githubBinding.viewmodel = githubViewModel
 

@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools">
-
+        >
     <data>
         <variable name="repo" type="com.example.training_4_29.model.entities.github.GithubRepo"/>
         <variable name="viewmodel" type="com.example.training_4_29.ui.activity.github.GithubViewModel"/>
@@ -11,10 +8,12 @@
     </data>
 
     <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".ui.activity.github.GithubActivity"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".ui.activity.github.GithubActivity">
+            android:layout_height="match_parent">
 
         <Button
                 android:text="Update repo list"

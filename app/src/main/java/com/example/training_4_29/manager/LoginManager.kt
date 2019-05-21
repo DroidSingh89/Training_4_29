@@ -7,8 +7,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 
 @SuppressLint("StaticFieldLeak")
-object LoginManager {
-    lateinit var context: Context
+class LoginManager(var context: Context) {
     val auth = FirebaseAuth.getInstance()
 
     fun checkSession(): Boolean = auth.currentUser != null

@@ -1,9 +1,11 @@
 package com.example.training_4_29.ui.activity.firebase
 
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
 import com.example.training_4_29.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.TrainingApp
+import com.example.training_4_29.databinding.ActivityFirebaseBinding
 import com.example.training_4_29.manager.CloudManager
 import com.example.training_4_29.utils.toast
 import kotlinx.android.synthetic.main.activity_firebase.*
@@ -11,18 +13,14 @@ import javax.inject.Inject
 
 class FirebaseActivity : BaseActivity(), FirebaseContract.View {
 
-
     @Inject
     lateinit var presenter: FirebasePresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_firebase)
+        //setContentView(R.layout.activity_firebase)
 
-        //presenter = FirebasePresenter(LoginManager(applicationContext))
-
-
-
+        val binding: ActivityFirebaseBinding = DataBindingUtil.setContentView(this, R.layout.activity_firebase)
 
         btnCreateUser.setOnClickListener {
             presenter.createUser(etEmail.text.toString(), etPassword.text.toString())
@@ -45,8 +43,6 @@ class FirebaseActivity : BaseActivity(), FirebaseContract.View {
         }
     }
 
-
-
     override fun onStart() {
         super.onStart()
         TrainingApp.get(this).firebaseComponent.inject(this)
@@ -57,7 +53,7 @@ class FirebaseActivity : BaseActivity(), FirebaseContract.View {
     override fun onStop() {
         super.onStop()
         presenter.removeView()
-        
+
     }
 
     override fun onUserCreation(isCreated: Boolean) {

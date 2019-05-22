@@ -116,6 +116,12 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
                 startActivity(Intent(applicationContext, GithubActivity::class.java))
             }
 
+            R.id.maps-> {
+                startActivity(Intent(applicationContext, MapsActivity::class.java))
+            }
+            R.id.customview-> {
+                startActivity(Intent(applicationContext, CustomViewActivity::class.java))
+            }
         }
         val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)
         drawerLayout.closeDrawer(GravityCompat.START)

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout>
+
     <data>
         <variable name="repo" type="com.example.training_4_29.model.entities.github.GithubRepo"/>
         <variable name="viewmodel" type="com.example.training_4_29.ui.activity.github.GithubViewModel"/>
 
     </data>
+
 
     <LinearLayout
             xmlns:android="http://schemas.android.com/apk/res/android"

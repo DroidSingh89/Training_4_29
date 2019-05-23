@@ -1,5 +1,6 @@
 package com.example.training_4_29.network
 
+import android.annotation.SuppressLint
 import android.util.Log
 import com.example.training_4_29.model.entities.github.GithubRepo
 import io.reactivex.Observable
@@ -46,18 +47,22 @@ class RemoteDataSource {
 
     }
 
+    @SuppressLint("CheckResult")
     fun getRepoListObs(username: String) {
         val retrofit = Retrofit.Builder().baseUrl(baseUrl)
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .build();
-        val service = retrofit.create(RemoteService::class.java)
+            .build()
+        retrofit.create(RemoteService::class.java)
             .getRepoListObs(username)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
             .flatMap { list -> Observable.create<GithubRepo> { emitter -> list.forEach { emitter.onNext(it) } } }
-            .map { it.name = "Repo name${it.name}"}
-            .subscribe { Log.d(RemoteDataSource::class.java.simpleName, "getRepoListObs: $it") }
+            .map {
+                it.name = "Repo name${it.name}"
+                it
+            }
+            .subscribe { repo -> Log.d(RemoteDataSource::class.java.simpleName, "getRepoListObs: ${repo.name}") }
 
     }
 

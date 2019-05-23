@@ -10,6 +10,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import com.example.training_4_29.ui.activity.*
 import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
 import com.example.training_4_29.ui.activity.github.GithubActivity
@@ -18,13 +20,10 @@ import com.google.android.material.navigation.NavigationView
 
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-
     protected fun useToolbar():Boolean = true
 
     override fun setContentView(layoutResID: Int) {
-
         setNavigationDrawer(layoutResID)
-
     }
 
     private fun setNavigationDrawer(layoutResID: Int) {

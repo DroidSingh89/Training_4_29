@@ -22,10 +22,17 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
+<<<<<<< HEAD
         <activity
                 android:name=".ui.activity.LayoutActivity"
                 android:configChanges="screenSize|orientation|keyboardHidden"/>
 
+=======
+        <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity">
+        </activity>
+        <activity android:name=".movieDb.ui.movielist.MovieListActivity">
+        </activity>
+>>>>>>> 8874d156f31340689dcf4d0b358ff9aeaeb6c493
         <activity android:name=".ui.activity.CustomViewActivity">
         </activity>
         <!--

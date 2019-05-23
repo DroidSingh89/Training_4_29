@@ -15,7 +15,7 @@ class ProviderActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_provider)
 
-        PermissionManager.checkContactPermission(this) { isGranted ->
+        PermissionManager.checkPermission(this, PermissionManager.PERMISSION.CONTACT) { isGranted ->
             if (isGranted) printList()
 
         }

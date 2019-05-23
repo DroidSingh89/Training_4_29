@@ -48,4 +48,12 @@
             android:id="@+id/github"
             android:title="Github"/>
 
+    <item
+            android:id="@+id/maps"
+            android:title="Maps"/>
+
+    <item
+            android:id="@+id/customview"
+            android:title="Custom View"/>
+
 </menu>

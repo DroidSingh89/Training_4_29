@@ -55,5 +55,8 @@
     <item
             android:id="@+id/customview"
             android:title="Custom View"/>
+    <item
+            android:id="@+id/movieDB"
+            android:title="Movie DB"/>
 
 </menu>

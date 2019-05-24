@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import com.example.training_4_29.movieDb.ui.movielist.MovieListActivity
 import com.example.training_4_29.ui.activity.*
 import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
 import com.example.training_4_29.ui.activity.github.GithubActivity
@@ -121,6 +122,9 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             }
             R.id.customview-> {
                 startActivity(Intent(applicationContext, CustomViewActivity::class.java))
+            }
+            R.id.movieDB-> {
+                startActivity(Intent(applicationContext, MovieListActivity::class.java))
             }
         }
         val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)

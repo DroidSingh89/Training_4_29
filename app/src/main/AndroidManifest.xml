@@ -22,14 +22,12 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.activity.EncryptionActivity">
+        <activity android:name=".ui.activity.AnimationActivity">
         </activity>
-        <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity">
-        </activity>
-        <activity android:name=".movieDb.ui.movielist.MovieListActivity">
-        </activity>
-        <activity android:name=".ui.activity.CustomViewActivity">
-        </activity>
+
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="2c13a7ab62c2f454abd96e9e5055ae280715c733"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,6 +40,16 @@
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
 
+        <activity android:name=".ui.activity.AnalyticsActivity">
+        </activity>
+        <activity android:name=".ui.activity.EncryptionActivity">
+        </activity>
+        <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity">
+        </activity>
+        <activity android:name=".movieDb.ui.movielist.MovieListActivity">
+        </activity>
+        <activity android:name=".ui.activity.CustomViewActivity">
+        </activity>
         <activity
                 android:name=".ui.activity.MapsActivity"
                 android:label="@string/title_activity_maps">

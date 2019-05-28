@@ -63,4 +63,12 @@
             android:id="@+id/encryption"
             android:title="Encryption"/>
 
+    <item
+            android:id="@+id/analytics"
+            android:title="Analytics"/>
+
+    <item
+            android:id="@+id/animation"
+            android:title="Animation"/>
+
 </menu>

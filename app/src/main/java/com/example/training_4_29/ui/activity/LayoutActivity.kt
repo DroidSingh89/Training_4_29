@@ -8,10 +8,10 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
-import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.model.entities.Animal
 import com.example.training_4_29.model.entities.Person
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.utils.toast
 
 
@@ -46,9 +46,9 @@ class LayoutActivity : BaseActivity() {
 
         //get person details
 
-        etPersonName = findViewById(R.id.etPersonName)
-        etPersonAge = findViewById(R.id.etPersonAge)
-        etPersonGender = findViewById(R.id.etPersonGender)
+//        etPersonName = findViewById(R.id.etPersonName)
+//        etPersonAge = findViewById(R.id.etPersonAge)
+//        etPersonGender = findViewById(R.id.etPersonGender)
 
     }
 

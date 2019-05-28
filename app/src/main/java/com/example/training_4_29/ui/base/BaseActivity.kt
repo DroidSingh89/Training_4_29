@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView
 open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
 
-    protected fun useToolbar():Boolean = true
+    protected fun useToolbar(): Boolean = true
 
     override fun setContentView(layoutResID: Int) {
 
@@ -37,7 +37,7 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
 
         val toolbar = findViewById<View>(R.id.myToolbar) as Toolbar
         //setup toolbar
-        if (useToolbar()){
+        if (useToolbar()) {
             setSupportActionBar(toolbar)
             title = "Training 4.29"
 //            setup for using the navigation toggle menu on toolbar
@@ -53,7 +53,6 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             toggle.isDrawerIndicatorEnabled = true
             toggle.syncState()
         }
-
 
 
 //        setup listener for navigation view
@@ -127,8 +126,15 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.movieDB -> {
                 startActivity(Intent(applicationContext, MovieListActivity::class.java))
             }
-            R.id.encryption-> {
+            R.id.encryption -> {
                 startActivity(Intent(applicationContext, EncryptionActivity::class.java))
+            }
+
+            R.id.analytics -> {
+                startActivity(Intent(applicationContext, AnalyticsActivity::class.java))
+            }
+            R.id.animation -> {
+                startActivity(Intent(applicationContext, AnimationActivity::class.java))
             }
         }
         val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)

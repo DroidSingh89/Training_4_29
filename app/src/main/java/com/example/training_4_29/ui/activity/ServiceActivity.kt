@@ -11,7 +11,7 @@ import android.os.Bundle
 import android.os.IBinder
 import androidx.annotation.RequiresApi
 import android.util.Log
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.service.MyBoundService
 import com.example.training_4_29.service.MyIntentService

@@ -5,7 +5,7 @@ import android.os.Handler
 import android.os.Message
 import android.util.Log
 import android.view.View
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.model.entities.MessageEvent
 import com.example.training_4_29.threads.MyAsyncTask

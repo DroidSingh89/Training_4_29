@@ -2,7 +2,7 @@ package com.example.training_4_29.ui.activity.firebase
 
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.TrainingApp
 import com.example.training_4_29.databinding.ActivityFirebaseBinding

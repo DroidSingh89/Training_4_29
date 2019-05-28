@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.databinding.ActivityGithubBinding
 import com.example.training_4_29.model.entities.github.GithubRepo

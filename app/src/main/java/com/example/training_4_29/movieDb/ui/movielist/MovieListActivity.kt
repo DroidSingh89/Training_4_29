@@ -2,7 +2,7 @@ package com.example.training_4_29.movieDb.ui.movielist
 
 import android.os.Bundle
 import android.util.Log
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.TrainingApp
 import com.example.training_4_29.movieDb.model.entities.Result

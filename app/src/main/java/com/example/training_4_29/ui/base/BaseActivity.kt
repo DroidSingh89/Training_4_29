@@ -1,4 +1,4 @@
-package com.example.training_4_29
+package com.example.training_4_29.ui.base
 
 import android.content.Intent
 import android.util.Log
@@ -10,6 +10,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
+import com.example.training_4_29.R
 import com.example.training_4_29.movieDb.ui.movielist.MovieListActivity
 import com.example.training_4_29.ui.activity.*
 import com.example.training_4_29.ui.activity.firebase.FirebaseActivity
@@ -88,43 +89,46 @@ open class BaseActivity : AppCompatActivity(), NavigationView.OnNavigationItemSe
             R.id.dataStorage -> {
                 startActivity(Intent(applicationContext, StorageActivity::class.java))
             }
-            R.id.provider-> {
+            R.id.provider -> {
                 startActivity(Intent(applicationContext, ProviderActivity::class.java))
             }
 
-            R.id.threading-> {
+            R.id.threading -> {
                 startActivity(Intent(applicationContext, ThreadingActivity::class.java))
             }
-            R.id.receiver-> {
+            R.id.receiver -> {
                 startActivity(Intent(applicationContext, ReceiverActivity::class.java))
             }
-            R.id.service-> {
+            R.id.service -> {
                 startActivity(Intent(applicationContext, ServiceActivity::class.java))
             }
 
-            R.id.network-> {
+            R.id.network -> {
                 startActivity(Intent(applicationContext, NetworkActivity::class.java))
             }
 
-            R.id.fragment-> {
+            R.id.fragment -> {
                 startActivity(Intent(applicationContext, FragmentActivity::class.java))
             }
-            R.id.firebase-> {
+            R.id.firebase -> {
                 startActivity(Intent(applicationContext, FirebaseActivity::class.java))
             }
 
-            R.id.github-> {
+            R.id.github -> {
                 startActivity(Intent(applicationContext, GithubActivity::class.java))
             }
 
-            R.id.maps-> {
+            R.id.maps -> {
                 startActivity(Intent(applicationContext, MapsActivity::class.java))
             }
-            R.id.customview-> {
+            R.id.customview -> {
                 startActivity(Intent(applicationContext, CustomViewActivity::class.java))
             }
-            R.id.movieDB-> {
+            R.id.movieDB -> {
                 startActivity(Intent(applicationContext, MovieListActivity::class.java))
+            }
+            R.id.encryption-> {
+                startActivity(Intent(applicationContext, EncryptionActivity::class.java))
             }
         }
         val drawerLayout: androidx.drawerlayout.widget.DrawerLayout = findViewById(R.id.drawer_layout)

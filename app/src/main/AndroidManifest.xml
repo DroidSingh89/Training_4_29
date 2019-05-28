@@ -22,6 +22,8 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.activity.EncryptionActivity">
+        </activity>
         <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity">
         </activity>
         <activity android:name=".movieDb.ui.movielist.MovieListActivity">

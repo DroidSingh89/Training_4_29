@@ -59,4 +59,8 @@
             android:id="@+id/movieDB"
             android:title="Movie DB"/>
 
+    <item
+            android:id="@+id/encryption"
+            android:title="Encryption"/>
+
 </menu>

@@ -6,7 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.model.entities.Animal
 import com.example.training_4_29.model.entities.Person

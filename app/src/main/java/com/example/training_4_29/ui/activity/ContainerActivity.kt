@@ -3,7 +3,7 @@ package com.example.training_4_29.ui.activity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.adapter.AnimalListAdapter
 import com.example.training_4_29.adapter.PersonListAdapter

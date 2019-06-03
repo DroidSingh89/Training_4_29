@@ -22,16 +22,10 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
-        <activity
-                android:name=".ui.activity.LayoutActivity"
-                android:configChanges="screenSize|orientation|keyboardHidden"/>
 
-        <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity">
-        </activity>
-        <activity android:name=".movieDb.ui.movielist.MovieListActivity">
-        </activity>
-        <activity android:name=".ui.activity.CustomViewActivity">
-        </activity>
+        <meta-data
+                android:name="io.fabric.ApiKey"
+                android:value="2c13a7ab62c2f454abd96e9e5055ae280715c733"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -43,6 +37,36 @@
         <meta-data
                 android:name="com.google.android.geo.API_KEY"
                 android:value="@string/google_maps_key"/>
+        <activity android:name=".movieDb.ui.moviedetail.MovieDetailActivity"/>
+
+        <activity android:name=".sampledagger.ui.BookActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+                android:name=".ui.activity.LayoutActivity"
+                android:configChanges="screenSize|orientation|keyboardHidden">
+
+        </activity>
+
+        <activity android:name=".ui.activity.AnimationActivity">
+        </activity>
+
+        <activity android:name=".ui.activity.AnalyticsActivity">
+        </activity>
+        <activity android:name=".ui.activity.EncryptionActivity">
+        </activity>
+
+        <activity android:name=".movieDb.ui.movielist.MovieListActivity">
+        </activity>
+        <activity android:name=".ui.activity.CustomViewActivity">
+        </activity>
+
         <activity
                 android:name=".ui.activity.MapsActivity"
                 android:label="@string/title_activity_maps">
@@ -109,7 +133,10 @@
                 android:name=".service.MyNormalService"
                 android:enabled="true"
                 android:exported="true">
+
         </service>
+
+
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.training_4_29.movieDb.di.module
 
+import com.example.training_4_29.movieDb.model.data.remote.MOVIE_BASE_URL
 import com.example.training_4_29.movieDb.model.data.remote.MOVIE_INTERCEPTOR
 import com.example.training_4_29.movieDb.model.data.remote.RemoteService
 import dagger.Module
@@ -15,6 +16,7 @@ class NetworkModule {
     @Provides
     fun providesNetworkClient(client: OkHttpClient):Retrofit{
         return Retrofit.Builder()
+            .baseUrl(MOVIE_BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

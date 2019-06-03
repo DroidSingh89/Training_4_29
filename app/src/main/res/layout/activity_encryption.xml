@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.EncryptionActivity">
+
+    <EditText
+            android:id="@+id/etPlainText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <Button
+            android:text="Encrypt text"
+            android:id="@+id/btnEncryptText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/tvEncryptedText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button
+            android:id="@+id/btnDecryptText"
+            android:text="Decrypt Text"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView
+            android:id="@+id/tvPlainText"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+</LinearLayout>

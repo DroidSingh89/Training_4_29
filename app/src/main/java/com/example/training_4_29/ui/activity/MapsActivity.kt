@@ -2,7 +2,7 @@ package com.example.training_4_29.ui.activity
 
 import android.location.Location
 import android.os.Bundle
-import com.example.training_4_29.BaseActivity
+import com.example.training_4_29.ui.base.BaseActivity
 import com.example.training_4_29.R
 import com.example.training_4_29.manager.LocationManager
 import com.example.training_4_29.manager.PermissionManager

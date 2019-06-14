@@ -3,7 +3,6 @@ package com.example.training_4_29.kotlinReview
 import com.example.training_4_29.model.entities.Animal
 import com.example.training_4_29.model.entities.Person
 
-
 fun main() {
 
     val john = Person("John Doe", 10, "Male")
